@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/edit.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="profile">
+            <div class="profile-img">
+                <img src="./assets/profile-img.png" alt="">
+            </div>
+            <div class="profile-info">
+                <h3>Ayden Thiao</h3>
+                <p>Set up your mindplex account</p>
+            </div>
+        </div>
+
+
+        <section class="profile-section">
+            <div class="profile-nav">
+                <ul class="profile-nav-lists">
+                    <a href="./index.html">
+                        <li class="profile-nav-lists-list">General</li>
+                    </a>
+                    <a href="./edit.html">
+                        <li class="profile-nav-lists-list" id="profile-nav-list-edit">Edit Profile</li>
+                    </a>
+                    <a href="./changepassword.html">
+                        <li class="profile-nav-lists-list">Password</li>
+                    </a>
+                    <a href="">
+                        <li class="profile-nav-lists-list">Settings</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="change-picture">
+                <div class="profile-picture">
+                    <img src="assets/profile-img.png" alt="Profile image">
+                </div>
+                <div class="change-form">
+                    <form action="">
+                        <div class="choose-file-input">
+                            <input type="file" name="" id="choose-img">
+                            <label for="choose-img">JPG, GIF OR PNG Max size of 800K</label>
+                        </div>
+                        <button>Upload</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="change-info">
+                <form action="">
+                    <div class="change-name-input">
+                        <label for="name">Name</label>
+                        <input type="text" name="" id="name">
+                    </div>
+
+                    <div class="change-biography-textarea">
+                        <label for="biography">Biography</label>
+                        <textarea name="" id="biography" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="change-personal-info">
+                        <div class="change-education">
+                            <label for="education">Education</label>
+                            <select name="" id="education">
+                                <option value="0">PHD in design</option>
+                                <option value="1">AI BSC</option>
+                                <option value="2">BA in Economics</option>
+                            </select>
+                        </div>
+                        <div class="change-age">
+                            <label for="age">Age</label>
+                            <input type="text" name="" id="age">
+                        </div>
+                        <div class="change-sex">
+                            <label for="sex">Sex</label>
+                            <input type="text" name="" id="sex">
+                        </div>
+                    </div>
+
+                    <div class="change-interest">
+                        <label for="interest">Interest</label>
+                        <select name="" id="interest">
+                            <option value="1">CryptoCurrency</option>
+                            <option value="2">Data Science</option>
+                            <option value="3">Networking</option>
+                        </select>
+                    </div>
+                    <div class="change-social">
+                        <label for="social">Social</label>
+                        <input type="text" name="" id="social"
+                            placeholder="Enter your social media links here and press Enter">
+                    </div>
+                    <div class="social-media-buttons">
+                        <a href="">Linkedin</a>
+                        <a href="">Facebook</a>
+                    </div>
+                    <Button>Save Changes</Button>
+
+                </form>
+            </div>
+        </section>
+    </body>
+
+</html>

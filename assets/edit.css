@@ -1,0 +1,255 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.profile {
+    margin-left: 2.5em;
+    margin-top: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5em;
+}
+
+.profile .profile-img {
+    margin-right: 0.5em;
+    width: 5%;
+}
+
+.profile .profile-img img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.profile .profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .profile-info h3 {
+    font-size: 15px;
+}
+
+.profile .profile-info p {
+    font-size: 13px;
+    font-weight: 4;
+    letter-spacing: 1px;
+    color: gray;
+    margin-top: 7px;
+}
+
+/**End of Profile styling*/
+
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10em;
+    margin-left: 2.5em;
+}
+
+.profile-section .profile-nav-lists {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 2em;
+    border-bottom: 1px solid gray;
+    /* margin-left: 2.5em; */
+    margin-right: 5em;
+}
+
+.profile-section .profile-nav-lists a {
+    text-decoration: none;
+    color: black;
+}
+
+.profile-section .profile-nav-lists .profile-nav-lists-list {
+    margin-right: 1.7em;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.profile-section .profile-nav-lists .profile-nav-lists-list:hover {
+    cursor: pointer;
+}
+
+
+.profile-section .profile-nav-lists a #profile-nav-list-edit {
+    border-bottom: 5px solid #6D7DF6;
+    color: #6D7DF6;
+}
+
+@media screen and (max-width:638px) {
+    .profile-section .profile-nav-lists .profile-nav-lists-list {
+        font-size: 10px;
+    }
+}
+
+.profile-section .change-picture {
+    display: flex;
+    margin-bottom: 5em;
+}
+
+.profile-section .change-picture .profile-picture {
+    margin-right: 1.5em;
+    width: 100%;
+}
+
+.profile-section .change-picture .profile-picture img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+/* 
+.profile-section .change-picture .change-form .choose-file-input input {
+    border: 1px solid gray;
+} */
+.profile-section .change-picture .change-form .choose-file-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section .change-picture .change-form .choose-file-input label {
+    font-size: 10px;
+    font-weight: 2;
+    color: gray;
+    margin-top: 0.7em;
+}
+
+.profile-section .change-picture .change-form button {
+    margin-top: 2em;
+    padding: 8px;
+    background-color: #3C48A5;
+    border: 1px solid #3C48A5;
+    color: white;
+    border-radius: 5px;
+}
+
+.profile-section .change-info {
+    padding-right: 2em;
+    padding-left: 1em;
+}
+
+.profile-section .change-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section .change-info form .change-personal-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.profile-section .change-info form .change-personal-info input {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.profile-section .change-info form .change-name-input,
+.profile-section .change-info form .change-biography-textarea,
+.profile-section .change-info form .change-interest,
+.profile-section .change-info-form .change-social,
+.profile-section .change-info form .change-personal-info .change-education,
+.profile-section .change-info form .change-personal-info .change-sex,
+.profile-section .change-info form .change-personal-info .change-age,
+.profile-section .change-info form .change-social {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+}
+
+.profile-section .change-info form .change-name-input input,
+.profile-section .change-info-form .change-social input,
+.profile-section .change-info form .change-personal-info .change-sex input,
+.profile-section .change-info form .change-personal-info .change-age input,
+.profile-section .change-info form .change-social input {
+    width: 100%;
+    height: 3em;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.profile-section .change-info form .change-interest select,
+.profile-section .change-info form .change-personal-info .change-education select {
+    border: 1px solid black;
+    background-color: white;
+    height: 3em;
+}
+
+.profile-section .change-info form label {
+    font-weight: bold;
+}
+
+.profile-section .change-info form .social-media-buttons {
+    margin-bottom: 2.5em;
+    margin-top: 0.3em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-section .change-info form .social-media-buttons a {
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+    margin-right: 0.3em;
+}
+
+.profile-section .change-info form button {
+    width: 70%;
+    padding: 8px 40px;
+    background-color: #041fba;
+    border: 1px solid #041fba;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+
+.profile-section .change-info form button:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width:411px) {
+    .profile-section .change-picture .profile-picture {
+        margin-right: 1.5em;
+        width: 15%;
+    }
+
+    .profile-section .change-info {
+        padding-right: 15em;
+        padding-left: 1em;
+    }
+
+    .profile-section .change-info form .change-name-input input,
+    .profile-section .change-info-form .change-social input,
+    .profile-section .change-info form .change-personal-info .change-sex input,
+    .profile-section .change-info form .change-personal-info .change-age input,
+    .profile-section .change-info form .change-social input {
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (min-width:600px) {
+    .profile-section .change-picture .change-form .choose-file-input label {
+        font-size: 15px;
+    }
+}
