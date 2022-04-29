@@ -5,8 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/general.css">
-
+        <link rel="stylesheet" href="./allcss.css">
         <title>Document</title>
     </head>
 
@@ -28,22 +27,22 @@
         <section class="profile-section">
             <div class="profile-nav">
                 <ul class="profile-nav-lists">
-                    <a href="./index.html">
-                        <li class="profile-nav-lists-list" id="profile-general-nav">General</li>
-                    </a>
-                    <a href="./edit.html">
-                        <li class="profile-nav-lists-list">Edit Profile</li>
-                    </a>
-                    <a href="./changepassword.html">
-                        <li class="profile-nav-lists-list">Password</li>
-                    </a>
+
+                    <li class="profile-nav-lists-list" data-tab-target="#general">General</li>
+
+
+                    <li class="profile-nav-lists-list" data-tab-target="#edit-profile">Edit Profile</li>
+
+
+                    <li class="profile-nav-lists-list" data-tab-target="#change-password">Password</li>
+
                     <!-- <a href="">
                         <li class="profile-nav-lists-list">Settings</li>
                     </a> -->
                 </ul>
             </div>
 
-            <div class="profile-form">
+            <div data-tab-content class="profile-form" id="general">
                 <form action="">
                     <div class="profile-input">
                         <label for="profile-name">Username</label>
@@ -60,27 +59,109 @@
                     <button>Save Changes</button>
                 </form>
             </div>
+
+
+
+            <div data-tab-content class="edit-profile" id="edit-profile">
+                <div class="change-picture">
+                    <div class="profile-picture">
+                        <img src="assets/profile-img.png" alt="Profile image">
+                    </div>
+                    <div class="change-form">
+                        <form action="">
+                            <div class="choose-file-input">
+                                <input type="file" name="" id="choose-img">
+                                <label for="choose-img">JPG, GIF OR PNG Max size of 800K</label>
+                            </div>
+                            <button>Upload</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="change-info">
+                    <form action="">
+                        <div class="change-name-input">
+                            <label for="name">Name</label>
+                            <input type="text" name="" id="name">
+                        </div>
+
+                        <div class="change-biography-textarea">
+                            <label for="biography">Biography</label>
+                            <textarea name="" id="biography" cols="30"
+                                rows="10">If you’re here, you probably know about my situation. I’m going to assume that you already know that for the last almost eight months I’ve been fighting a very public battle that involves topics I didn’t know much about until recently boundaries, consent.</textarea>
+                        </div>
+
+                        <div class="change-personal-info">
+                            <div class="change-education">
+                                <label for="education">Education</label>
+                                <select name="" id="education">
+                                    <option value="0">PHD in design</option>
+                                    <option value="1">AI BSC</option>
+                                    <option value="2">BA in Economics</option>
+                                </select>
+                            </div>
+                            <div class="change-age">
+                                <label for="age">Age</label>
+                                <input type="text" name="" id="age">
+                            </div>
+                            <div class="change-sex">
+                                <label for="sex">Sex</label>
+                                <input type="text" name="" id="sex">
+                            </div>
+                        </div>
+
+                        <div class="change-interest">
+                            <label for="interest">Interest</label>
+                            <select name="" id="interest">
+                                <option value="1">CryptoCurrency</option>
+                                <option value="2">Data Science</option>
+                                <option value="3">Networking</option>
+                            </select>
+                        </div>
+                        <div class="change-social">
+                            <label for="social">Social</label>
+                            <input type="text" name="" id="social"
+                                placeholder="Enter your social media links here and press Enter">
+                        </div>
+                        <div class="social-media-buttons">
+                            <a href="">
+                                <span class="social-media-icons">
+                                    <img src="./assets/facebookicon.svg" alt="">
+                                </span> Linkedin</a>
+                            <a href="">
+                                <span class="social-media-icons">
+                                    <img src="./assets/facebookicon.svg" alt="">
+                                </span>
+                                Facebook</a>
+                        </div>
+                        <Button>Save Changes</Button>
+
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div data-tab-content class="profile-form" id="change-password">
+                <form action="">
+                    <div class="profile-input">
+                        <label for="old-password">Old Password</label>
+                        <input type="password" name="" id="old-password" value="123456">
+                    </div>
+                    <div class="profile-input">
+                        <label for="new-password">New Password</label>
+                        <input type="password" name="" id="new-password">
+                    </div>
+                    <button>Save Changes</button>
+                </form>
+            </div>
+
+
         </section>
-        <!--Profile edit ends here-->
+        <!--Profile edit ends here--
+        <script src="./assets/js/allpages.js"></script>
 
-        <script>
-            const tabs = document.querySelectorAll('[data-tab-target]')
-            const tabContents = document.querySelectorAll('[data-tab-content]')
 
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const target = document.querySelector(tab.dataset.tabTarget)
-                    tabContents.forEach(tabContent => {
-                        tabContent.classList.remove('active')
-                    })
-                    tabs.forEach(tab => {
-                        tab.classList.remove('active-click')
-                    })
-                    tab.classList.add('active-click')
-                    target.classList.add('active')
-                })
-            })
-        </script>s
     </body>
 
 </html>
