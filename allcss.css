@@ -329,3 +329,79 @@ body {
         font-size: 15px;
     }
 }
+
+
+
+
+
+.profile-section .profile-form {
+    /* display: none; */
+    margin-left: 2.5em;
+}
+
+.profile-section .profile-form .profile-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+.profile-section .profile-form .profile-input input {
+    width: 80%;
+    height: 3em;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    padding-left: 20px;
+    padding-bottom: 14px;
+    padding-top: 20px;
+}
+
+.profile-section .profile-form .profile-input label {
+    font-weight: bold;
+
+}
+
+.profile-section .profile-form button {
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--button-bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--button-color);
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.profile-section .profile-form button:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width:637px) {
+    .profile-section .profile-form .profile-input input {
+        width: 60%;
+    }
+
+    .profile-section .profile-nav-lists {
+        width: 60%;
+    }
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.active-click {
+    color: var(--active-tab-color);
+}
+
+
+
+.active-click::after {
+    content: " ";
+    display: block;
+    background-color: var(--active-tab-color);
+}

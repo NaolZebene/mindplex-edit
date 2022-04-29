@@ -5,11 +5,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/edit.css">
+        <link rel="stylesheet" href="./allcss.css">
         <title>Document</title>
     </head>
 
     <body>
+        <!--Profile Section starts here-->
         <div class="profile">
             <div class="profile-img">
                 <img src="./assets/profile-img.png" alt="">
@@ -20,25 +21,48 @@
             </div>
         </div>
 
+        <!--Profile Section ends here-->
+        <!--Profile Edit form starts here-->
 
         <section class="profile-section">
             <div class="profile-nav">
                 <ul class="profile-nav-lists">
-                    <a href="./index.html">
-                        <li class="profile-nav-lists-list">General</li>
-                    </a>
-                    <a href="./edit.html">
-                        <li class="profile-nav-lists-list" id="profile-nav-list-edit">Edit Profile</li>
-                    </a>
-                    <a href="./changepassword.html">
-                        <li class="profile-nav-lists-list">Password</li>
-                    </a>
+
+                    <li class="profile-nav-lists-list" data-tab-target="#general">General</li>
+
+
+                    <li class="profile-nav-lists-list" data-tab-target="#edit-profile">Edit Profile</li>
+
+
+                    <li class="profile-nav-lists-list" data-tab-target="#change-password">Password</li>
+
                     <!-- <a href="">
                         <li class="profile-nav-lists-list">Settings</li>
                     </a> -->
                 </ul>
             </div>
-            <div class="edit-profile">
+
+            <div data-tab-content class="profile-form" id="general">
+                <form action="">
+                    <div class="profile-input">
+                        <label for="profile-name">Username</label>
+                        <input type="text" name="" id="profile-name" value="Ayden Tiao">
+                    </div>
+                    <div class="profile-input">
+                        <label for="profile-email">Email</label>
+                        <input type="text" name="" id="profile-email" value="ayden@gmail.com">
+                    </div>
+                    <div class="profile-input">
+                        <label for="profile-midplex-handle">MinPlex Handle</label>
+                        <input type="text" name="" id="profile-midplex-handle" value="AydenTiao">
+                    </div>
+                    <button>Save Changes</button>
+                </form>
+            </div>
+
+
+
+            <div data-tab-content class="edit-profile" id="edit-profile">
                 <div class="change-picture">
                     <div class="profile-picture">
                         <img src="assets/profile-img.png" alt="Profile image">
@@ -115,7 +139,29 @@
                     </form>
                 </div>
             </div>
+
+
+
+            <div data-tab-content class="profile-form" id="change-password">
+                <form action="">
+                    <div class="profile-input">
+                        <label for="old-password">Old Password</label>
+                        <input type="password" name="" id="old-password" value="123456">
+                    </div>
+                    <div class="profile-input">
+                        <label for="new-password">New Password</label>
+                        <input type="password" name="" id="new-password">
+                    </div>
+                    <button>Save Changes</button>
+                </form>
+            </div>
+
+
         </section>
+        <!--Profile edit ends here--
+        <script src="./assets/js/allpages.js"></script>
+
+
     </body>
 
 </html>

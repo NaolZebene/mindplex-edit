@@ -1,3 +1,13 @@
+:root {
+    --border-color: #D9D5D5;
+    --button-color: #FFFFFF;
+    --button-bg-color: #3C48A5;
+    --button-width: 316px;
+    --button-height: 50px;
+    --input-border-color: #878686;
+    --active-tab-color: #6D7DF6;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,7 +26,8 @@
 
 .profile .profile-img {
     margin-right: 0.5em;
-    width: 5%;
+    width: 70px;
+    height: 70px;
 }
 
 .profile .profile-img img {
@@ -54,7 +65,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 2em;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--border-color);
     margin-left: 2.5em;
     margin-right: 5em;
 }
@@ -77,8 +88,8 @@
 }
 
 .profile-section .profile-nav-lists a #profile-general-nav {
-    border-bottom: 5px solid #6D7DF6;
-    color: #6D7DF6;
+    border-bottom: 5px solid var(--active-tab-color);
+    color: var(--active-tab-color);
 }
 
 @media screen and (max-width:638px) {
@@ -103,7 +114,7 @@
     height: 3em;
     margin-top: 5px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid var(--input-border-color);
 }
 
 .profile-section .profile-form .profile-input label {
@@ -111,9 +122,10 @@
 }
 
 .profile-section .profile-form button {
-    padding: 8px 50px;
-    background-color: #3C48A5;
-    border: 1px solid #3C48A5;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--button-bg-color);
+    border: 1px solid var(--button-color);
     color: white;
     font-size: 15px;
     border-radius: 5px;
@@ -126,6 +138,9 @@
 @media screen and (min-width:637px) {
     .profile-section .profile-form .profile-input input {
         width: 60%;
+        padding-left: 18px;
+        padding-top: 14px;
+        padding-bottom: 16px;
     }
 
     .profile-section .profile-nav-lists {
